@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"name": "Decorative Throw Pillow",
+		"category": "Pillows",
+		"description": "Soft and plush decorative throw pillow for couch or bed.",
+		"color": "Blue",
+		"material": "Velvet",
+		"price": 19.99,
+		"image": "Decorative_Throw_Pillow.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Wall Art",
+		"category": "Art",
+		"description": "Canvas wall art with abstract design.",
+		"color": "Multicolor",
+		"material": "Canvas",
+		"price": 39.99,
+		"image": "Wall_Art.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Table Lamp",
+		"category": "Lighting",
+		"description": "Modern table lamp with adjustable brightness.",
+		"color": "Silver",
+		"material": "Metal",
+		"price": 29.99,
+		"image": "Table_Lamp.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Area Rug",
+		"category": "Rugs",
+		"description": "Soft and durable area rug for living room or bedroom.",
+		"color": "Gray",
+		"material": "Polypropylene",
+		"price": 79.99,
+		"image": "Area_Rug.jpg"
+	},
+	{
+		"id": 5,
+		"name": "Scented Candle",
+		"category": "Candles",
+		"description": "Aromatherapy scented candle in a glass jar.",
+		"color": "White",
+		"material": "Soy Wax",
+		"price": 12.99,
+		"image": "Scented_Candle.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Faux Fur Blanket",
+		"category": "Blankets",
+		"description": "Luxuriously soft faux fur blanket for cozy evenings.",
+		"color": "Cream",
+		"material": "Polyester",
+		"price": 49.99,
+		"image": "Faux_Fur_Blanket.jpg"
+	},
+	{
+		"id": 7,
+		"name": "Decorative Vase",
+		"category": "Decor",
+		"description": "Elegant decorative vase for displaying flowers.",
+		"color": "Gold",
+		"material": "Ceramic",
+		"price": 24.99,
+		"image": "Decorative_Vase.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Accent Mirror",
+		"category": "Mirrors",
+		"description": "Round accent mirror with metal frame.",
+		"color": "Black",
+		"material": "Glass",
+		"price": 34.99,
+		"image": "Accent_Mirror.jpg"
+	}
+]
