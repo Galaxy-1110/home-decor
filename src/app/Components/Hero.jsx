@@ -9,7 +9,7 @@ export default function Hero() {
 				" " +
 				"bg-[url('https://media.architecturaldigest.com/photos/622a4e512b9c59af16b36cc9/master/w_1600%2Cc_limit/PW%2520STORE-PILLOW%2520SHELF.jpg')] bg-contain bg-center bg-no-repeat " +
 				" " +
-				"after:absolute after:z-[-1] after:inset-0 after:opacity-55 after:bg-slate-400"
+				"after:absolute after:z-[-1] after:inset-0 after:opacity-45 after:bg-[#F5E9DB]"
 			}>
 			<motion.h1
 				className="text-white text-center"
@@ -38,7 +38,7 @@ export default function Hero() {
 									key={i}
 									variants={{
 										hidden: { opacity: 0, y: 20, color: "white" },
-										shown: { opacity: 1, y: 0, color: "#F5E9DB" },
+										shown: { opacity: 1, y: 0, color: "#615344" },
 									}}
 									className="inline-block">
 									{char}
