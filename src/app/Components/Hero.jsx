@@ -7,7 +7,7 @@ export default function Hero() {
 			className={
 				"min-h-screen isolate relative flex md:text-5xl text-2xl justify-center flex-col gap-10 items-center" +
 				" " +
-				"bg-[url('https://media.architecturaldigest.com/photos/622a4e512b9c59af16b36cc9/master/w_1600%2Cc_limit/PW%2520STORE-PILLOW%2520SHELF.jpg')] bg-contain bg-center bg-no-repeat " +
+				"bg-[url('/images.jpg')] bg-contain bg-center bg-no-repeat " +
 				" " +
 				"after:absolute after:z-[-1] after:inset-0 after:opacity-45 after:bg-[#F5E9DB]"
 			}>
