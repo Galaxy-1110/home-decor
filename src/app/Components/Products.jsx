@@ -47,15 +47,15 @@ export default function Products() {
 							</AnimatePresence>
 							<motion.div
 								className={
-									"flex justify-between flex-col h-full gap-5 bg-[#6D583F] p-10 rounded-2xl " +
+									"flex justify-between flex-col h-full gap-5 bg-[#6D583F] p-8 rounded-2xl " +
 									" " +
-									"  overflow-hidden  border border-transparent  group-hover:border-[#BFAE9E] relative z-20"
+									"overflow-hidden  border border-transparent  group-hover:border-[#BFAE9E] relative z-20"
 								}>
 								<div className="flex flex-col gap-2">
 									<img
 										src={product.image}
 										alt={product.name}
-										className="rounded-lg mb-4"
+										className="rounded-lg mb-4 "
 									/>
 									<h3 className="text-2xl text-[#2E2E2E] font-bold    ">
 										{product.name}
