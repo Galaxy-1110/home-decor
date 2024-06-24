@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-export default function Reveal({ children }) {
+export default function Reveal({ children, fullSize }) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 
@@ -14,9 +14,11 @@ export default function Reveal({ children }) {
 	}, [isInView]);
 
 	return (
-		<div ref={ref} className="relative w-auto">
+		<div
+			ref={ref}
+			className={"relative " + `${fullSize ? "w-full" : "w-auto"}`}>
 			<motion.div
-				className="h-auto w-auto"
+				className="h-auto w-[inherit]"
 				variants={{
 					hidden: { opacity: 0, y: 75 },
 					shown: { opacity: 1, y: 0 },

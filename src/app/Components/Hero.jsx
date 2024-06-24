@@ -5,7 +5,7 @@ export default function Hero() {
 	return (
 		<section
 			className={
-				"min-h-screen isolate relative flex md:text-5xl text-2xl justify-center flex-col gap-10 items-center" +
+				"min-h-screen isolate relative flex md:text-5xl sm:text-2xl text-xl justify-center flex-col gap-10 items-center" +
 				" " +
 				"bg-[url('/images.jpg')] bg-contain bg-center bg-no-repeat " +
 				" " +

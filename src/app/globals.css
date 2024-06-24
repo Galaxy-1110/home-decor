@@ -83,3 +83,7 @@ h1 {
 	font-family: "Poetsen One", sans-serif;
 	font-style: normal;
 }
+
+section {
+	overflow: scroll;
+}
