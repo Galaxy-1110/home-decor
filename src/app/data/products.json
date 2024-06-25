@@ -42,7 +42,7 @@
 	{
 		"id": 5,
 		"name": "Scented Candle",
-		"category": "Candles",
+		"category": "Lighting",
 		"description": "Aromatherapy scented candle in a glass jar.",
 		"color": "White",
 		"material": "Soy Wax",
@@ -62,7 +62,7 @@
 	{
 		"id": 7,
 		"name": "Decorative Vase",
-		"category": "Decor",
+		"category": "Art",
 		"description": "Elegant decorative vase for displaying flowers.",
 		"color": "Gold",
 		"material": "Ceramic",

@@ -18,7 +18,6 @@ import { useState } from "react";
 
 export default function Productdetails({ params }) {
 	const [scope, animate] = useAnimate();
-	// const [tempScope, tempanimate] = useAnimate();
 	const [content, setContent] = useState("Add to Cart");
 	const [isAnimating, setIsAnimating] = useState(false);
 	const product = data.find((product) => product.id == params.productId);
@@ -71,46 +70,6 @@ export default function Productdetails({ params }) {
 			setIsAnimating(false);
 		}, 2000);
 	};
-	// const handleBtnClick2 = async () => {
-	// 	if (isAnimating) return;
-
-	// 	setIsAnimating(true);
-	// 	tempanimate(".btn", { cursor: "not-allowed" });
-	// 	tempanimate("#initial", { translate: ["0px", "160px"] }, { duration: 0.6 });
-	// 	tempanimate(
-	// 		"#final",
-	// 		{ left: ["-180px", "auto"] },
-	// 		{ delay: 0.5, duration: 0.6 }
-	// 	);
-	// 	tempanimate(
-	// 		".btn",
-	// 		{
-	// 			background: [
-	// 				"linear-gradient(90deg, rgba(129,231,54,1) 0%, rgba(109,88,63,1) 0%, rgba(109,88,63,1) 100%)",
-	// 				"linear-gradient(90deg, rgba(129,231,54,1) 0%, rgba(129,231,54,1) 0%, rgba(129,231,54,1) 100%)",
-	// 			],
-	// 		},
-	// 		{ duration: 0.4, transition: "ease-in-out" }
-	// 	);
-
-	// 	await setTimeout(async () => {
-	// 		tempanimate("#final", { left: ["auto", "-180px"] }, { duration: 0.8 });
-	// 		await tempanimate(
-	// 			"#initial",
-	// 			{ translate: ["160px", "0px"] },
-	// 			{ delay: 0.5, duration: 0.6 }
-	// 		);
-	// 		tempanimate(".btn", {
-	// 			background: [
-	// 				"linear-gradient(90deg, rgba(109,88,63,1) 0%, rgba(129,231,54,1) 0%, rgba(129,231,54,1) 100%)",
-	// 				"linear-gradient(90deg, rgba(129,231,54,1) 0%, rgba(109,88,63,1) 0%, rgba(109,88,63,1) 100%)",
-	// 			],
-	// 		});
-
-	// 		tempanimate(".btn", { cursor: "pointer" });
-	// 		setIsAnimating(false);
-	// 	}, 2000);
-	// };
 
 	return (
 		<>
@@ -169,30 +128,6 @@ export default function Productdetails({ params }) {
 									<span className="text ">{content}</span>
 								</motion.button>
 							</div>
-							{/* <div ref={tempScope}>
-								<motion.button
-									whileHover={{ scale: [null, 1.1] }}
-									transition={{
-										duration: 1,
-										type: "tween",
-										repeatType: "reverse",
-									}}
-									onClick={handleBtnClick2}
-									className="btn px-8 py-4 w-48 bg-[#6D583F] text-[#F5E9DB] rounded-3xl flex gap-5 align-middle items-center relative overflow-hidden">
-									<div
-										id="final"
-										className="absolute top-auto left-[-180px] flex flex-row align-middle items-center gap-4">
-										<IoCheckmarkCircle />
-										<span className="">Added to Cart</span>
-									</div>
-									<div
-										id="initial"
-										className="flex flex-row align-middle items-center gap-4">
-										<IoCart className="icon " />
-										<span className="text ">Add to Cart</span>
-									</div>
-								</motion.button>
-							</div> */}
 						</div>
 					</div>
 				</Reveal>
