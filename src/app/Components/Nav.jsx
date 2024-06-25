@@ -139,7 +139,7 @@ export default function Nav() {
 						</motion.button>
 
 						{IconActive && (
-							<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center">
+							<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 backgroundblur flex justify-center items-center">
 								<div className="flex flex-col gap-5">
 									{[
 										{

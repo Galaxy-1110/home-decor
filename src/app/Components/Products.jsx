@@ -11,9 +11,15 @@ export default function Products() {
 	const [hovered, setHovered] = useState(null);
 	const [query, setQuery] = useState("");
 
-	const filteredData = data.filter((product) => {
-		return product.name.toLowerCase().includes(query.toLowerCase());
+	let filteredData = data.filter((product) => {
+		return (
+			product.name.toLowerCase().includes(query.toLowerCase()) ||
+			product.category.toLowerCase().includes(query.toLowerCase())
+		);
 	});
+
+	const styledbtn = `p-2 border border-[#BFAE9E] rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#BFAE9E] focus:ring-opacity-50 focus:ring-2 focus:ring-[#BFAE9E]  backdrop-blur-xl transition-all`;
+	const categories = data.map((product) => product.category);
 	return (
 		<section
 			id="Products"
@@ -28,6 +34,27 @@ export default function Products() {
 						value={query}
 						onChange={(e) => setQuery(e.target.value)}
 					/>
+				</div>
+				<div className="flex gap-6 mb-4  flex-wrap">
+					<button onClick={() => setQuery("")} className={styledbtn}>
+						No filter
+					</button>
+					{categories.map((category, i) => {
+						return (
+							<button
+								key={i}
+								className={
+									"flex gap-1 cursor-pointer pointer-events-auto justify-center align-middle items-center " +
+									" " +
+									styledbtn
+								}
+								onClick={() => setQuery(category)}>
+								<label htmlFor={"option" + i} className="cursor-pointer">
+									{category}{" "}
+								</label>
+							</button>
+						);
+					})}
 				</div>
 				<div
 					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 "
