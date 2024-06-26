@@ -31,6 +31,12 @@ export default function Nav() {
 		}
 	};
 
+	const navItems = [
+		{ name: "Home", link: `${usePathname() == "/" ? "#top" : "/"}` },
+		{ name: "Products", link: "/#Products" },
+		{ name: "Features", link: "/#Features" },
+	];
+
 	return (
 		<nav className="fixed top-0 bg-black opacity-75 w-full md:px-7 px-1 py-0 z-50">
 			<div className="flex justify-between items-center align-middle px-8 py-5">
@@ -47,10 +53,7 @@ export default function Nav() {
 					<div
 						className="flex items-center space-x-12 "
 						onMouseLeave={() => setHovered(null)}>
-						{[
-							{ name: "Home", link: `${usePathname() == "/" ? "#top" : "/"}` },
-							{ name: "Products", link: "/#Products" },
-						].map((item, index) => {
+						{navItems.map((item, index) => {
 							return (
 								<Link
 									key={index}
@@ -141,13 +144,7 @@ export default function Nav() {
 						{IconActive && (
 							<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 backgroundblur flex justify-center items-center">
 								<div className="flex flex-col gap-5">
-									{[
-										{
-											name: "Home",
-											link: `${usePathname() == "/" ? "#top" : "/"}`,
-										},
-										{ name: "Products", link: "/#Products" },
-									].map((item, index) => {
+									{navItems.map((item, index) => {
 										return (
 											<Link
 												key={index}
