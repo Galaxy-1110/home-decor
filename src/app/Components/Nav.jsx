@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 
 export default function Nav() {
 	const [hovered, setHovered] = useState(null);
-	const [isDesktop, setisDesktop] = useState(false);
 	const [IconActive, setIconActive] = useState(false);
 
+	const [isDesktop, setisDesktop] = useState(false);
 	useEffect(() => {
 		checkWindowSize();
 		window.addEventListener("resize", checkWindowSize);

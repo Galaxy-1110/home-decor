@@ -3,7 +3,7 @@ import Link from "next/link";
 import data from "../data/products.json";
 import Reveal from "@/components/Reveal";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
@@ -11,6 +11,26 @@ export default function Products() {
 	const [hovered, setHovered] = useState(null);
 	const [query, setQuery] = useState("");
 
+	const [isDesktop, setisDesktop] = useState(false);
+	useEffect(() => {
+		checkWindowSize();
+		window.addEventListener("resize", checkWindowSize);
+		return () => {
+			window.removeEventListener("resize", checkWindowSize);
+		};
+	}, [isDesktop]);
+
+	const checkWindowSize = () => {
+		let windowWidth;
+		if (typeof window !== "undefined") {
+			windowWidth = window.innerWidth;
+		}
+		if (windowWidth >= 1028) {
+			setisDesktop(true);
+		} else {
+			setisDesktop(false);
+		}
+	};
 	let filteredData = data.filter((product) => {
 		return (
 			product.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -32,7 +52,7 @@ export default function Products() {
 			id="Products"
 			className=" flex flex-col gap-10 items-center w-full p-5 md:p-14 bg-[#F5E9DB]">
 			<h2 className="md:text-5xl text-2xl font-bold">Featured Products</h2>
-			<Reveal fullSize amount={0.2}>
+			<Reveal fullSize amount={isDesktop ? 0.2 : 0.1}>
 				<div className="flex flex-1 w-full justify-center gap-5 mb-5 ">
 					<input
 						type="text"
