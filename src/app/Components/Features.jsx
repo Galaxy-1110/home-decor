@@ -16,9 +16,9 @@ export default function Features() {
 						<motion.div
 							whileHover={{
 								y: -10,
-								backdropFilter: "blur(5px)",
 								cursor: "default",
-							}}>
+							}}
+							whileTap={{ scale: 0.95 }}>
 							<div className="mb-5">{feature.icon}</div>
 							<div>
 								<h2 className="text-xl md:text-2xl font-bold mt-4">
