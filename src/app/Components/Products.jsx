@@ -18,14 +18,21 @@ export default function Products() {
 		);
 	});
 
-	const styledbtn = `p-2 border border-[#BFAE9E] rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-[#BFAE9E] focus:ring-opacity-50 focus:ring-2 focus:ring-[#BFAE9E]  backdrop-blur-xl transition-all`;
-	const categories = data.map((product) => product.category);
+	const styledbtn = `px-4 py-2 text-slate-900 `;
+	let categories = data.map((product) => product.category);
+	categories = ["No filter", ...categories];
+
+	const handleCategoryClick = (category) => {
+		if (category == "No filter") return setQuery("");
+		setQuery(category);
+	};
+
 	return (
 		<section
 			id="Products"
 			className=" flex flex-col gap-10 items-center w-full p-5 md:p-14 bg-[#F5E9DB]">
 			<h2 className="md:text-5xl text-2xl font-bold">Featured Products</h2>
-			<Reveal fullSize>
+			<Reveal fullSize amount={0.2}>
 				<div className="flex flex-1 w-full justify-center gap-5 mb-5 ">
 					<input
 						type="text"
@@ -35,24 +42,24 @@ export default function Products() {
 						onChange={(e) => setQuery(e.target.value)}
 					/>
 				</div>
-				<div className="flex gap-6 mb-4  flex-wrap">
-					<button onClick={() => setQuery("")} className={styledbtn}>
-						No filter
-					</button>
+				<div className="flex gap-6 mb-4 flex-wrap">
 					{categories.map((category, i) => {
 						return (
-							<button
+							<motion.button
 								key={i}
 								className={
-									"flex gap-1 cursor-pointer pointer-events-auto justify-center align-middle items-center " +
+									"flex gap-1 cursor-pointer pointer-events-auto justify-center align-middle items-center glass" +
 									" " +
 									styledbtn
 								}
-								onClick={() => setQuery(category)}>
-								<label htmlFor={"option" + i} className="cursor-pointer">
-									{category}{" "}
-								</label>
-							</button>
+								whileTap={{
+									scale: 0.95,
+									color: "#BFAE9E",
+									backgroundColor: "#000000",
+								}}
+								onClick={() => handleCategoryClick(category)}>
+								{category}
+							</motion.button>
 						);
 					})}
 				</div>
