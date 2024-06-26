@@ -38,7 +38,6 @@ export default function Products() {
 		);
 	});
 
-	const styledbtn = `px-4 py-2 text-slate-900 `;
 	let categories = data.map((product) => product.category);
 	categories = ["No filter", ...categories];
 
@@ -62,15 +61,13 @@ export default function Products() {
 						onChange={(e) => setQuery(e.target.value)}
 					/>
 				</div>
-				<div className="flex gap-6 mb-4 flex-wrap">
+				<div className="flex md:gap-3 gap-2 mb-4 flex-wrap">
 					{categories.map((category, i) => {
 						return (
 							<motion.button
 								key={i}
 								className={
-									"flex gap-1 cursor-pointer pointer-events-auto justify-center align-middle items-center glass" +
-									" " +
-									styledbtn
+									"flex gap-1 cursor-pointer pointer-events-auto justify-center align-middle items-center glass px-2 py-2 text-sm md:text-base md:px-4 md:py-2 text-slate-900"
 								}
 								whileTap={{
 									scale: 0.95,
